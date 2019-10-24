@@ -11,7 +11,6 @@
     "remark-dropcap": "^0.1.1"
   },
   "devDependencies": {
-    "remark": "^11.0.1"
   },
   "homepage": "https://github.com/brev/gatsby-remark-dropcap#readme",
   "keywords": [
