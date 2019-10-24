@@ -4,7 +4,7 @@
 [remark-dropcap][remarkdropcap].
 
 Modifies the first letter of the first paragraph from your markdown, converting
-it into a cross-browser Drop Cap typography span.
+it into accessible, cross-browser Drop Cap typography markup.
 
 ## Syntax
 
@@ -15,7 +15,7 @@ Input Markdown:
 
 When in the course of human events.
 
-Things go **wild**.
+Things go wild.
 ```
 
 Output HTML:
@@ -23,10 +23,14 @@ Output HTML:
 ```html
 <h1>Hello World</h1>
 <p>
-  <span class="dropcap">W</span>hen in the course of human events.
+  <span aria-hidden="true">
+    <span class="dropcap">W</span>hen
+  </span>
+  <span class="invisible">When</span>
+  in the course of human events. 
 </p>
 <p>
-  Things go <strong>wild</stong>.
+  Things go wild.
 </p>
 ```
 
@@ -38,7 +42,9 @@ npm install --save gatsby-remark-dropcap
 
 ## Usage
 
-In your `gatsby-config.js`:
+The following snippets are for the `gatsby-config.js` file.
+
+Simple usage:
 
 ```javascript
 plugins: [
@@ -47,10 +53,57 @@ plugins: [
     options: {
       plugins: [
         'gatsby-remark-dropcap'
-      ],
-    },
-  },
-];
+      ]
+    }
+  }
+]
+```
+
+Advanced usage, with options:
+
+```javascript
+plugins: [
+  {
+    resolve: 'gatsby-transformer-remark',
+    options: {
+      plugins: [
+        {
+          resolve: 'gatsby-remark-dropcap',
+          options: {
+            classDropcap:   'dropcap',
+            classInvisible: 'invisible'
+          }
+        }
+      ]
+    }
+  }
+]
+```
+
+## Styling
+
+Example CSS classes to get you started:
+
+```css
+.dropcap {
+  color: red;
+  float: left;
+  font-size: 5rem;
+  line-height: 3.5rem;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+/* hide visually from eyes, but not aurally from screen readers */
+.invisible {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  white-space: nowrap;
+  width: 1px;
+}
 ```
 
 ## License
