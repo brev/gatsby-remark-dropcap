@@ -1,32 +1,39 @@
-# gatsby-remark-containers
+# gatsby-remark-dropcap
 
 [Gatsby.js][gatsby] [Remark][remark] plugin wrapper for
-[remark-containers][remarkcontainers].
+[remark-dropcap][remarkdropcap].
 
-Provides parsing for `:::` delimited containers to wrap markdown blocks in
-arbitrary html. This snippet:
+Modifies the first letter of the first paragraph from your markdown, converting
+it into a cross-browser Drop Cap typography span.
+
+## Syntax
+
+Input Markdown:
 
 ```markdown
-::: aside
-# Header One
+# Hello World
 
-With container contents.
-:::
+When in the course of human events.
+
+Things go **wild**.
 ```
 
-Results in:
+Output HTML:
 
 ```html
-<aside>
-  <h1>Header One</h1>
-  <p>With container contents.</p>
-</aside>
+<h1>Hello World</h1>
+<p>
+  <span class="dropcap">W</span>hen in the course of human events.
+</p>
+<p>
+  Things go <strong>wild</stong>.
+</p>
 ```
 
 ## Install
 
 ```bash
-npm install --save gatsby-remark-containers
+npm install --save gatsby-remark-dropcap
 ```
 
 ## Usage
@@ -39,14 +46,14 @@ plugins: [
     resolve: 'gatsby-transformer-remark',
     options: {
       plugins: [
-        'gatsby-remark-containers'
+        'gatsby-remark-dropcap'
       ],
     },
   },
 ];
 ```
 
-## Test + Cover
+## Test
 
 ```bash
 npm test
@@ -56,9 +63,10 @@ npm test
 
 [MIT][mit]
 
+© 2019 Brev Patterson <me@brev.name> (https://brev.name)
 
 [gatsby]: https://www.gatsbyjs.org/
 [mit]: https://github.com/brev/gatsby-remark-contianers/blob/master/LICENSE
 [remark]: https://remark.js.org/
-[remarkcontainers]: https://github.com/Nevenall/remark-containers#readme
+[remarkdropcap]: https://github.com/brev/remark-dropcap
 

@@ -1,37 +1,33 @@
 {
-  "name": "gatsby-remark-containers",
-  "version": "1.0.0",
+  "name": "gatsby-remark-dropcap",
+  "version": "0.1.0",
   "private": false,
-  "description": "Gatsby.js Remark plugin wrapper for remark-containers. Provides parsing for ::: delimited containers to wrap markdown blocks in arbitrary html.",
-  "author": "Brev Patterson <me@brev.name>",
+  "description": "Gatsby Remark plugin that generates cross-browser Drop Cap typography for the first letter of the first paragraph of your markdown input.",
+  "author": "Brev Patterson <me@brev.name> (https://brev.name)",
   "bugs": {
-    "url": "https://github.com/brev/gatsby-remark-containers/issues"
+    "url": "https://github.com/brev/gatsby-remark-dropcap/issues"
   },
   "dependencies": {
-    "remark-containers": "^1.1.0"
+    "remark-dropcap": "^0.1.1"
   },
   "devDependencies": {
-    "dedent": "^0.7.0",
-    "jest": "^24.9.0",
-    "remark": "^11.0.1",
-    "unist-util-find": "^1.0.1"
+    "remark": "^11.0.1"
   },
-  "files": [
-    "index.js",
-    "README.md"
-  ],
-  "homepage": "https://github.com/brev/gatsby-remark-containers#readme",
+  "homepage": "https://github.com/brev/gatsby-remark-dropcap#readme",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
+    "markdown",
+    "plugin",
     "remark",
-    "remark-containers",
-    "markdown"
+    "remark-dropcap",
+    "remark-plugin"
   ],
   "license": "MIT",
   "main": "index.js",
-  "repository": "https://github.com/brev/gatsby-remark-containers.git",
-  "scripts": {
-    "test": "jest --coverage"
-  }
+  "repository": {
+    "url": "https://github.com/brev/gatsby-remark-dropcap.git",
+    "type": "git"
+  },
+  "scripts": {}
 }

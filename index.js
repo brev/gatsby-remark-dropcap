@@ -1,5 +1,7 @@
-const containers = require("remark-containers");
+var dropcap = require('remark-dropcap')
 
-module.exports = ({ markdownAST }) => markdownAST;
-module.exports.setParserPlugins = () => [containers];
+module.exports = function ({ markdownAST }) {
+  var transform = dropcap()
+  transform(markdownAST)
+}
 
