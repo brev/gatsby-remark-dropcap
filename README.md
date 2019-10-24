@@ -70,8 +70,8 @@ plugins: [
         {
           resolve: 'gatsby-remark-dropcap',
           options: {
-            classDropcap:   'dropcap',
-            classInvisible: 'invisible'
+            dropcapClass:   'dropcap',
+            invisibleClass: 'invisible'
           }
         }
       ]
