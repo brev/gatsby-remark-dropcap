@@ -53,12 +53,6 @@ plugins: [
 ];
 ```
 
-## Test
-
-```bash
-npm test
-```
-
 ## License
 
 [MIT][mit]
