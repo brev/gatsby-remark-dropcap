@@ -8,10 +8,9 @@
     "url": "https://github.com/brev/gatsby-remark-dropcap/issues"
   },
   "dependencies": {
-    "remark-dropcap": "^0.1.1"
+    "remark-dropcap": "^0.1.5"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "homepage": "https://github.com/brev/gatsby-remark-dropcap#readme",
   "keywords": [
     "gatsby",
